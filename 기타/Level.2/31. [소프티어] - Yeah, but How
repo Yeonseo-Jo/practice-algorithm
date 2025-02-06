@@ -1,0 +1,22 @@
+# [소프티어] - Yeah, but How?
+
+### [ 문제 정보 ]
+> **기타**: https://softeer.ai/app/assessment/index.html?xid=387203&xsrfToken=RxX5XbNfKEodxBwMwD14ui41OrG5qmTh&testType=practice
+> 
+> **난이도**: 2
+>
+> **유형**: #문자열
+
+
+### [ 문제 풀이 ]
+```JavaScript
+const fs = require('fs')
+const input = fs.readFileSync(0).toString().trim()
+
+console.log(input.replace(/\(\)/g, '(1)').replace(/\)\(/g, ')+('));
+```
+* 주의 : replaceAll 메서드는 node.js v15 환경부터 가능! <br>-> 소프티어에서는 v12를 사용하므로, replace()와 regex를 사용해야 함! (/g)
+
+
+---
+@www.codrive.co.kr
